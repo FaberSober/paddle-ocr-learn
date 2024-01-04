@@ -19,4 +19,10 @@ paddleocr --image_dir=1.png --type=structure --table=false --ocr=false
 paddleocr --image_dir=table.jpg --type=structure --layout=false
 paddleocr --image_dir=table2.png --type=structure --layout=false
 
+# 部署服务
+python tools/test_hubserving.py --server_url=http://127.0.0.1:8868/predict/ocr_system --image_dir=/root/codes/ocr/pp-structure-v2/2.png --visualize=false
+
+python tools/test_hubserving.py --server_url=http://127.0.0.1:8870/predict/structure_system --image_dir=/root/codes/ocr/pp-structure-v2/table2.png --visualize=false
+python tools/test_hubserving.py --server_url=http://127.0.0.1:8870/predict/structure_system --image_dir=/root/codes/ocr/pp-structure-v2/table.jpg --visualize=false
+
 
