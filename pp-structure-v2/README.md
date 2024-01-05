@@ -37,8 +37,15 @@ hub install deploy/hubserving/structure_system/
 
 `hub serving start -c ./deploy/hubserving/structure_system/config.json`
 
+完整命令：/root/miniconda3/envs/paddle_env/bin/python /root/miniconda3/envs/paddle_env/bin/hub serving start -c ./deploy/hubserving/structure_system/config.json
+
 ### 后台启动
 nohup hub serving start -c ./deploy/hubserving/structure_system/config.json > /dev/null 2>&1 &
+
+ps -ef|grep hub
+
+使用/root/codes/ocr/PaddleOCR/service.sh脚本。
+
 
 ## 测试部署服务
 python tools/test_hubserving.py --server_url=http://127.0.0.1:8868/predict/ocr_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/2.png --visualize=false
@@ -47,4 +54,14 @@ python tools/test_hubserving.py --server_url=http://127.0.0.1:8870/predict/struc
 python tools/test_hubserving.py --server_url=http://127.0.0.1:8870/predict/structure_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/table.jpg --visualize=false
 
 python tools/test_hubserving.py --server_url=http://ocr.structure_system.dward.cn/predict/structure_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/table2.png --visualize=false
+
+# 查看nvidia显卡使用状态
+直接使用
+`nvitop`
+
+展示超完整的显卡信息，则用如下命令：
+`nvitop -m full`
+
+**安装方式**
+`pip install nvitop`
 
