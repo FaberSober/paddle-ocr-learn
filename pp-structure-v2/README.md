@@ -8,6 +8,8 @@ python3 /root/.local/lib/python3.8/site-packages/paddleocr/paddleocr.py --image_
 ## 图像方向分类+版面分析+表格识别
 paddleocr --image_dir=1.png --type=structure --image_orientation=true
 paddleocr --image_dir=2.png --type=structure --image_orientation=true
+paddleocr --image_dir=3.png --type=structure --image_orientation=true
+paddleocr --image_dir=table2.png --type=structure --image_orientation=true
 
 ## 版面分析+表格识别
 paddleocr --image_dir=1.png --type=structure
@@ -48,7 +50,7 @@ ps -ef|grep hub
 
 
 ## 测试部署服务
-python tools/test_hubserving.py --server_url=http://127.0.0.1:8868/predict/ocr_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/2.png --visualize=false
+python tools/test_hubserving.py --server_url=http://127.0.0.1:8868/predict/ocr_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/3.png --visualize=false
 
 python tools/test_hubserving.py --server_url=http://127.0.0.1:8870/predict/structure_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/table2.png --visualize=false
 python tools/test_hubserving.py --server_url=http://127.0.0.1:8870/predict/structure_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/table.jpg --visualize=false
