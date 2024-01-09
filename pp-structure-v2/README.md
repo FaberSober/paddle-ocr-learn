@@ -58,6 +58,8 @@ python tools/test_hubserving.py --server_url=http://127.0.0.1:8870/predict/struc
 python tools/test_hubserving.py --server_url=http://ocr.structure_system.dward.cn/predict/structure_system --image_dir=/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/table2.png --visualize=false
 
 # 查看nvidia显卡使用状态
+nvidia-smi
+
 直接使用
 `nvitop`
 
