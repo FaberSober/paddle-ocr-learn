@@ -9,6 +9,13 @@ python3 /root/.local/lib/python3.8/site-packages/paddleocr/paddleocr.py --image_
 paddleocr --image_dir=1.png --type=structure --image_orientation=true
 paddleocr --image_dir=2.png --type=structure --image_orientation=true
 paddleocr --image_dir=3.png --type=structure --image_orientation=true
+- 带有文字、图片的混合识别
+paddleocr --image_dir=4.png --type=structure --image_orientation=true
+- 带有文字、图片、公式的混合识别
+paddleocr --image_dir=5.png --type=structure --image_orientation=true
+- 带有文字、图片、公式、表格的混合识别
+paddleocr --image_dir=6.png --type=structure --image_orientation=true
+
 paddleocr --image_dir=table2.png --type=structure --image_orientation=true
 
 ## 版面分析+表格识别
